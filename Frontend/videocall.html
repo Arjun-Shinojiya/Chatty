@@ -1,0 +1,39 @@
+<html lang="en">
+  <head>
+    <title>Video Chat</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="Video Chat.">
+    <meta name="author" content="Brian Mau">
+    <link href="public/css/videocall.css" rel="stylesheet">
+  </head>
+  <body>
+      
+    <video class="localVideo" playsinline autoplay muted></video>
+    
+    <div class="remoteVideos">
+      <div class="handup-wrapper">
+        <img id="hangUp" src="/call-end.png">   
+        <img class="holdCall" src="/hold.png">
+        <img class="resumeCall" src="/hold.png">
+      </div>
+    </div>
+    <!-- <a onclick="hangUp()" style="color:red; position:absolute;">End Call</a> -->
+   
+    <script src="public/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="public/jquery-ui-1.12.1/jquery-1.12.4.js"></script>
+     <script src="public/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="public/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="public/js/emojionearea.js"></script>
+    <script src="public/common.js"></script>
+    <!-- Sweetalerts -->
+    <script src='public/js/socket.io.js'></script>
+    <script src="public/js/sweetalert.min.js"></script>
+    <script src="public/js/moment.js"></script>
+   
+    
+    
+    <script src="public/socket.js"></script>
+</body>
+</html>

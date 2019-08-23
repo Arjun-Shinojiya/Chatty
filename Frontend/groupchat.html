@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AdminLTE 2 | Fixed Layout</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="public/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="public/bower_components/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="public/bower_components/Ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="public/css/croppie.css" />
+
+  <link rel="stylesheet" href="public/css/emojionearea.css">
+  <link rel = "stylesheet" href="public/css/mk-notifications.css">
+  
+  <!-- Theme style -->
+  <link rel="stylesheet" href="public/dist/css/AdminLTE.css">
+  
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="public/dist/css/skins/_all-skins.min.css">
+
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <link rel="stylesheet" href="public/chatpage.css">
+</head>
+<!-- ADD THE CLASS fixed TO GET A FIXED HEADER AND SIDEBAR LAYOUT -->
+<!-- the fixed layout is not compatible with sidebar-mini -->
+<body  user-id="0" class="hold-transition skin-blue fixed sidebar-mini">
+<!-- Site wrapper -->
+<div class="wrapper">
+
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="../../index2.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>A</b>LT</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>Admin</b>LTE</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+         
+          <!-- Notifications: style can be found in dropdown.less -->
+          <li class="dropdown notifications-menu">
+            <a href="#" class="dropdown-toggle" id="request_notification" data-toggle="dropdown">
+              <i class="fa fa-bell-o"></i>
+              <span class="label label-warning" id="notificationcount"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">Chat Requests!!</li>
+              <li>
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu">
+                 <!--  <li>
+                    <a href="#">
+                      <i class="fa fa-users text-aqua"></i> 5 new members joined today 
+                      <i class="fa fa-check-circle righttick"></i>
+                      <i class="fa fa-times-circle wrongtick"></i>
+                    </a>
+                  </li> -->
+                </ul>
+              </li>
+              <li class="footer"><a href="#">View all</a></li>
+            </ul>
+          </li>
+         
+                     
+            
+             
+            
+          <!-- Tasks: style can be found in dropdown.less -->
+         
+          <!-- User Account: style can be found in dropdown.less -->
+          <li class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <img src="" class="user-image" alt="User Image">
+              <span class="hidden-xs" style="font-size: 16px;"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- User image -->
+              <li class="user-header">
+                <img src="" class="img-circle" alt="User Image">
+                <p>
+                  <span class="insideprofilename"></span> 
+                </p>
+              </li>
+              <!-- Menu Body -->
+              
+              <!-- Menu Footer-->
+              <li class="user-footer">
+                <div class="pull-left">
+                  <a href="/profile.html" class="btn btn-default btn-flat">Profile</a>
+                </div>
+                <div class="pull-right">
+                  <a href="http://localhost:3000/logout" class="btn btn-default btn-flat" id="btnsignout">Sign out</a>
+                </div>
+              </li>
+            </ul>
+          </li>        
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- =============================================== -->
+
+  <!-- Left side column. contains the sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p class="username" style="font-size: 16px;"></p>
+          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        </div>
+      </div>
+      <!-- search form -->
+      <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="Search...">
+              <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                </button>
+              </span>
+        </div>
+      </form>
+      <!-- /.search form -->
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu" data-widget="tree">
+        <li class="header">MAIN NAVIGATION</li>
+        <li >
+            <a href="http://localhost:3000/user">
+              <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+         </li>
+         <li>
+            <a href="http://localhost:3000/chatrequestpage">
+              <i class="fa fa-envelope"></i> <span>Notifications</span>
+              <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+            </a>
+          </li>
+
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- =============================================== -->
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+      <div id="loader"></div>
+        <div class="box box-warning direct-chat direct-chat-warning">
+                <div class="box-header with-border">
+                    
+                  <img src="http://localhost:3000/public/assets/grouplogo.png" class="groupchatpageimage">
+                  
+                  
+                  <h3 class="box-title" style="margin-top:2px; margin-left:5px;" id="editable"></h3>
+                  <input type="text"  id="inputgroupname" style="display:none;">
+                
+                  <div class="box-tools pull-right">
+                      <a href="#"  class="showmembers" data-toggle="modal" data-target="#modal-members" >
+                          <i class="fa fa-users" id="showmembers"></i>
+                      </a>
+
+                      <a href="#" id="request_notification" class="addmemberplus" data-toggle="modal" data-target="#modal-addmember" >
+                          <img src="public/assets/plus.png" class="addmemberimage" >
+                      </a> 
+                        
+                      <a href="#"  class="exitgroup" data-toggle="modal" data-target="#modal-default" >
+                        <i class="fa fa-sign-out" id="exitgroup"></i>
+                      </a>
+                      </div>
+                    </div>
+                  <!-- <img src="" class="chatpageimage"> -->
+
+
+                    <!-- Modal for croppie image -->
+                    
+                  
+                    <!-- Modal for leave group -->
+                  <div class="modal fade" id="modal-default">
+         
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                       <!--  <div class="modal-header" display="block">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span></button>
+                         
+                        </div> -->
+                        <div class="modal-body">
+                          <h4>Do you really wanna leave the group?</h4>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" id="leavegroup" style="width: 40%;"class="btn btn-default pull-left" data-dismiss="modal">Yes</button>
+                          <button type="button" style="width: 40%;" class="btn btn-primary" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                      <!-- /.modal-content -->
+                    </div>
+                 
+                </div>
+                
+                <!-- Modal for add member -->
+                <div class="modal fade" id="modal-addmember">
+         
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                         <div class="modal-header" display="block" style="padding:0px;">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-right:20px; margin-top:10px;">
+                            <span aria-hidden="true">&times;</span></button>
+                            <h3 class="headgroupmember">Add Member</h3>
+                        </div> 
+                        <div class="modal-body">
+                            <ul  class ="groupsfriendlist">
+
+                            </ul>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="insert-member" style="width: 20%;" class="btn btn-primary" data-dismiss="modal">Add member</button>
+                        </div>
+                      </div>
+                      <!-- /.modal-content -->
+                    </div>
+                 
+                </div>
+
+                <!-- Modal for admin to choose another admin -->
+                <div class="modal fade" id="modal-makeadmin">
+         
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                         <div class="modal-header" display="block" style="padding:0px;">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-right:20px; margin-top:10px;">
+                            <span aria-hidden="true">&times;</span></button>
+                            <h3 class="headgroupmember">Make Admin</h3>
+                        </div> 
+                        <div class="modal-body">
+                            <ul  class ="makeadminlist">
+
+                              </ul>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="makeadmin" style="width: 20%;" class="btn btn-primary" data-dismiss="modal">Make Admin</button>
+                        </div>
+                      </div>
+                      <!-- /.modal-content -->
+                    </div>
+                 
+                </div>
+
+                <!-- Modal for showing group members -->
+                <div class="modal fade" id="modal-members">
+         
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                         <div class="modal-header" display="block" style="padding:0px;">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-right:20px; margin-top:10px;">
+                            <span aria-hidden="true">&times;</span></button>
+                            <h3 class="headgroupmember">Group Members</h3>
+                        </div> 
+                        <div class="modal-body">
+                         <ul class="groupmemberlist">
+                            <li style="list-style: none; "><p class="kicktext" >Kick</p></li>
+                         </ul>
+                        </div>
+                        <div class="modal-footer">
+                          
+                          <button type="button" id="kickmember" style="width: 20%;" class="btn btn-primary" data-dismiss="modal">Save</button>
+                        </div>
+                      </div>
+                      <!-- /.modal-content -->
+                    </div>
+                 
+                </div>
+
+                
+                <!-- /.box-header -->
+                <div class="box-body">
+                  <!-- Conversations are loaded here -->
+                  <div class="direct-chat-messages">
+            
+                  
+                   
+                   <!--  <div class="direct-chat-msg right">
+                      <div class="direct-chat-info clearfix">
+                        <span class="direct-chat-name pull-right">Sarah Bullock</span>
+                        <span class="direct-chat-timestamp pull-left">23 Jan 6:10 pm</span>
+                      </div>
+                     
+                      <img class="direct-chat-img" src="public/dist/img/user3-128x128.jpg" alt="message user image">
+                      
+                      <div class="direct-chat-text" id="message">
+                      
+                      </div>
+                    
+                    </div> -->
+                   
+                    
+            
+                  </div>
+                  <!--/.direct-chat-messages-->
+            
+                  <!-- Contacts are loaded here -->
+                 
+                  <!-- /.direct-chat-pane -->
+                </div>
+                <!-- /.box-body -->
+                <div class="box-footer">
+                
+                   <!--   <input type="text" name="message" placeholder="Type Message ..." class="form-control" id="inputbox">
+                     <span class="input-group-btn">
+                        <button type="button" class="btn btn-warning btn-flat" id="btnsend">Send</button>
+                          </span> -->
+                          <div class="input-box">
+                            <!-- <input id="inputbox" type="text" placeholder="Type a message"> -->
+                            <input id="inputbox" type="text" class="form-control grpMessage" placeholder="Type a message...">
+                            <input type="file" name="file" id="imagefile" multiple/>
+                            <div class="icon"><i id="microphone" class="fa fa-paperclip attachment" aria-hidden="true"></i></div>
+                          <button type="button" class="btn btn-warning btn-flat" id="sendGrpMessage">Send</button>
+                          </div>
+                    
+                  
+                </div>
+                <!-- /.box-footer-->
+              </div>
+            
+              </div>
+              <!--/.direct-chat -->
+            </div>
+           
+    <!-- Main content -->
+   
+        
+  <!-- /.content-wrapper -->
+
+  <!-- Control Sidebar -->
+ 
+<!-- ./wrapper -->
+
+<!-- jQuery 3 -->
+
+<script src = "public/bower_components/jquery/dist/jquery.min.js"></script>
+<!-- <script src="public/jquery-ui-1.12.1/jquery-1.12.4.js"></script> -->
+<script src="public/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="public/jquery-ui-1.12.1/jquery-ui.js"></script>
+<!-- Bootstrap 3.3.7 -->
+
+<!-- SlimScroll -->
+
+<!-- FastClick -->
+<script src="public/bower_components/fastclick/lib/fastclick.js"></script>
+<script src="public/js/emojionearea.js"></script>
+<!-- AdminLTE App -->
+<script src="public/dist/js/adminlte.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="public/dist/js/demo.js"></script>
+<script src="public/js/socket.io.js"></script>
+<script src="public/common.js"></script>
+<script src="public/js/moment.js"></script>
+<script src="public/js/croppie.js"></script>
+<script src="public/js/mk-notifications.js"></script>
+<script src="public/js/sweetalert.min.js"></script>
+<script src="public/socket.js"></script>
+<script src="public/user.js"></script>
+<script src="public/groupchat.js"></script>
+
+<script>
+    var groupid = localStorage.getItem("groupid");
+    var token = localStorage.getItem('token');
+    var groupdata = {groupid:groupid}
+    $.ajax({
+    type: 'POST',
+    async: true,
+    crossDomain: true,
+    url: baseUrl+'updateuseronlinestatus',
+    "headers": {
+      "authorization": token,
+      /* "Content-Type": "application/x-www-form-urlencoded",  */
+      "cache-control": "no-cache",
+    },
+    contentType: "application/JSON",
+    dataType: 'json',
+    data: JSON.stringify(groupdata),
+    success: function (res) {
+      console.log("update status" + res);
+     
+    },
+    error: function (jqXHR, textStatus, err) {
+      console.log('Ajax repsponse:', textStatus);
+
+    }
+  });
+
+
+</script>
+
+</body>
+</html>

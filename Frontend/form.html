@@ -1,0 +1,119 @@
+<html>
+    <head>
+            <link rel="stylesheet" href="public/css/bootstrap.min.css">
+            <link rel = "stylesheet" href= "public/jquery-ui-1.12.1/style.css">
+            <link rel = "stylesheet" href= "public/jquery-ui-1.12.1/jquery-ui-saved.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel = "stylesheet" href="public/css/mk-notifications.css">
+            <link rel="stylesheet" type="text/css" href="public/form.css">
+            <link rel="stylesheet" href="public/css/croppie.css" />
+    </head>
+<body>
+            
+    <h1>Contact Form.</h1>
+   
+<form  method="POST" id="myform" enctype="multipart/form-data">
+      <h1>Please Fill the whole form :</h1>
+
+  <div class="contentform">
+      <div id="sendmessage"> Your message has been sent successfully. Thank you. </div>
+
+
+      <div class="leftcontact">
+           <div class="form-group">
+                  <p >Name<span>*</span></p>
+                  
+                  <span class="icon-case"><i class="fa fa-male"></i></span>
+                  <input type="text" name="name" id="name" onfocusout="return validatefirstname(this);" />
+                  <div class="validation1 " id="error" ></div>             
+                </div> 
+            
+
+
+         <div class="form-group">
+          <p>LastName<span>*</span></p>
+          <span class="icon-case"><i class="fa fa-user"></i></span>
+              <input type="text" name="lastname" id="lastname" onfocusout="return validatelastname(this);" />
+              <div class="validation1" id="lastnameerror"></div>
+          </div>
+ 
+          <div class="form-group">
+          <p>E-mail <span>*</span></p>    
+          <span class="icon-case"><i class="fa fa-envelope-o"></i></span>
+              <input type="email" name="email" id="email" onfocusout="return validateemail(this);"/>
+              <div class="validation1 " id="emailerror"></div>
+          </div>  
+          <div class="form-group">
+          <p>Password<span>*</span></p>    
+         <span class="icon-case"><i class="fa fa-key"></i></span>
+                <input type="password" name="pass" id="pass" data-toggle="tooltip" data-placement="right"  
+                title="Password should have 8-12 chars,1 uppercase,1digit,1 special character and 1 lower case"
+                onfocusout="return validatepassword(this);"/>
+                <div class="validation1 " id="passworderror"></div>
+             </div>  
+             <div class="form-group">
+                <p>Birthdate<span>*</span></p>    
+               <span class="icon-case"><i class="fa fa-birthday-cake"></i></span>
+                      <input type="text" name="birthdate" id="birthdate" />
+                      <div class="validation1 " id="datepickererror"></div>
+                </div>   
+         
+     </div>
+
+  <div class="rightcontact">  
+
+    <div class="form-group">
+            <p>Image Upload<span>*</span></p>
+            <span class="icon-case"><i class="fa fa-building-o"></i></span>
+            <input type="file" name="file" id="fileupload"/>
+        </div>
+       
+        <img id="my-image" src="#" />
+        <button type="button" id="use">Upload</button>
+        <img id="result" src="">
+        <input type="hidden" name="imagecrop" id="imagecrop"/>
+          <div class="form-group">
+          <p>Phone number <span>*</span></p>  
+          <span class="icon-case"><i class="fa fa-phone"></i></span>
+              <input type="text" name="phonenumber" id="phonenumber" onfocusout="return validatephonenumber(this)"/>
+              <div class="validation1 " id="phonenumbererror"></div>
+          </div>
+          
+          <div class="form-group">
+                <p>Postcode <span>*</span></p>
+                <span class="icon-case"><i class="fa fa-map-marker"></i></span>
+                    <input type="number" name="zipcode" id="zipcode"/>
+                    <div class="validation1 " id="zipcodeerror"></div>
+            </div> 
+            <div class="form-group">
+                <p>Username<span>*</span></p>
+                
+                <span class="icon-case"><i class="fa fa-male"></i></span>
+                <input type="text" name="username" id="username"  />
+                <div class="validation1 " id="usererror" ></div>             
+              </div> 
+           
+  </div>
+  </div>
+<button type="button" id="sub1" class="bouton-contact" value="Submit" onclick="get()">Send</button>
+  
+</form>
+<div class="loader" style="display:none;" >
+        <div class="bor" style="display:none"></div>
+</div> 
+
+<script src="public/jquery-ui-1.12.1/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="public/pooperjs/popper.min.js"crossorigin="anonymous"></script>
+	<script src="public/js/bootstrap.min.js"  crossorigin="anonymous"></script>
+	<script src="public/jquery-ui-1.12.1/jquery-1.12.4.js"></script>
+    <script src="public/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/jquery.validate.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/additional-methods.min.js"></script>
+    <script src ="public/common.js"></script>
+    <script src="public/js/mk-notifications.js"></script>
+    <script src="public/js/croppie.js"></script>
+
+<script type="text/javascript" src="public/form.js"></script>
+
+</body>
+</html>

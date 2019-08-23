@@ -1,0 +1,136 @@
+html body {
+    width: 100%;
+    height: 100%;
+  }
+  
+  body {
+    
+    color: #fff;
+   
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-size: 15px;
+  }
+  
+  .rolldown-list {
+    text-align: left;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .rolldown-list li {
+    padding: 2em;
+    margin-bottom: .125em;
+    display: block;
+    list-style: none;
+  
+    font-size: 13px;
+  }
+  
+  .rolldown-list li {
+    visibility: hidden;
+    animation: rolldown .7s 1;
+    transform-origin: 50% 0;
+    animation-fill-mode: forwards;
+  }
+  
+  .rolldown-list li:nth-child(2n) {
+    background-color: white;
+  }
+  
+  .rolldown-list li:nth-child(2n+1) {
+    background-color: white;
+  }
+  
+  #myList {
+   
+    width: 100%; 
+    left: 100%;
+    }
+    .righttick{
+        font-size: 25px;
+        color: green;
+       cursor: pointer;
+       float: right;
+      padding-right: 20px;
+      margin-top: -11px;
+      }
+    
+      .righttick:hover{
+        color:darkgreen;
+      }
+    
+      .wrongtick{
+        font-size: 25px;
+        color: red;
+        cursor: pointer;
+        float: right;
+        padding-right: 20px;
+        margin-top: -11px;
+       }
+    
+      .wrongtick:hover{
+        color: darkred;
+      }
+ 
+  
+  @keyframes rolldown {
+    0% {
+      visibility: visible;
+      transform: rotateX(180deg) perspective(500px);
+    }
+    70% {
+      visibility: visible;
+      transform: rotateX(-20deg);
+    }
+    100% {
+      visibility: visible;
+      transform: rotateX(0deg);
+    }
+  }
+
+  #boxaccordian{
+    padding: 0px;
+   }
+
+#divcontent{
+  margin-top: 30px;
+}
+
+.listimage{
+  width: 40px;
+  height: 40px;
+  float: left;
+  border-radius: 50%;
+  margin-top:-20px;
+}
+
+.listname{
+  float: left;
+  margin-top:-9px;
+  margin-left: 10px;
+  font-size: 15px;
+}
+
+.behindlistname{
+  float: left;
+  margin-top:-9px;
+  margin-left: 2px;
+  font-size: 15px;
+}
+
+#pludblueimg{
+ 
+  width: 25px;
+  height: 25px;
+  float: right ;
+  margin-left: 880px;
+  margin-top: -3px;
+}
+
+#blueimg{
+  width: 25px;
+  height: 25px;
+  float: right ;
+  margin-left: 838px;
+  margin-top: -3px;
+}

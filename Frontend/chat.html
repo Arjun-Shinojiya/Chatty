@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <link rel = "stylesheet" href= "public/jquery-ui-1.12.1/style.css">
+    <link rel = "stylesheet" href= "public/jquery-ui-1.12.1/jquery-ui-saved.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel= "stylesheet" href="public/chat.css">
+   
+</head>
+<body>
+
+        <ul class="pages">
+                <li class="chat page">
+                    <div id="feedback"></div>
+                  <div class="chatArea">
+
+                    <ul class="messages"></ul>
+                  </div>
+                 
+                  <input class="message" placeholder="Type here..."/>
+                  <button id="send" class="btn btn-success">Send</button>
+                </li>
+                <li class="login page">
+                        <div class="form">
+                          <h3 class="title">Welcome</h3>
+                          <input type="text" class="usernameInput" id="usernameInput" readonly="readonly"/>
+                          <button id="namesend" class="btn btn-success">Enter</button>
+                        </div>
+                      </li>
+              </ul>
+       <!--  <div class="container">
+           
+                <br>
+                <div class="messagebox">
+                <div id="messages">
+                </div>
+                </div>
+               
+                <div class="footer">
+               <input id = "name" class="form-control" placeholder="Name">
+                <br>
+                <textarea id = "message" class="form-control" placeholder="Your Message Here">
+               </textarea>
+                <br>
+                <button id="send" class="btn btn-success">Send</button>
+            </div>
+               
+               </div> -->
+               <script>
+                var name = "<%= xyz %>";
+               var loginperson = "<%= loginperson %>"
+              
+                 </script>
+             
+<script src="public/jquery-ui-1.12.1/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="public/pooperjs/popper.min.js"crossorigin="anonymous"></script>
+	<script src="public/js/bootstrap.min.js"  crossorigin="anonymous"></script>
+	<script src="public/jquery-ui-1.12.1/jquery-1.12.4.js"></script>
+    <script src="public/jquery-ui-1.12.1/jquery-ui.js"></script>
+
+    <script src="public/js/socket.io.js"></script>
+    <script src="public/chat.js"></script>
+   
+
+</body>
+</html>
