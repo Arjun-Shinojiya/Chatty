@@ -14,7 +14,7 @@
     "http": "0.0.0",
     "http-server": "^0.11.1",
     "image-downloader": "^3.4.2",
-    "jsonwebtoken": "^8.5.0",
+    "jsonwebtoken": "^9.0.0",
     "mkdirp": "^0.5.1",
     "moment": "^2.24.0",
     "mongoose": "^5.4.9",
